@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pune Real Estate Price Prediction</title>
+    <script src="../static/js/app.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            overflow: hidden; /* Prevent scrollbar */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            width: 90%;
+            max-width: 600px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        h2 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+
+        .area, .dropdown, .location {
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 10px;
+            margin-bottom: 20px;
+            width: 100%;
+            max-width: 300px;
+        }
+
+        .dropdown {
+            background: #ecf0f1;
+        }
+
+        .submit {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            padding: 15px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            width: 100%;
+            max-width: 300px;
+        }
+
+        .submit:hover {
+            background-color: #2980b9;
+        }
+
+        .result {
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        .img {
+            background-image: url('path_to_your_image.jpg'); /* Adjust path to your image */
+            background-size: cover;
+            height: 200px;
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Pune Real Estate price predictor</h1>
+        <form class="form">
+            <h2>Area (Square Feet)</h2>
+            <input class="area" type="text" id="uiSqft" name="Squareft" value="1000" />
+            
+            <h2>BHK</h2>
+            <div>
+                <select class="dropdown" id="BHK">
+                    <option value="" disabled selected>Choose BHK</option>
+                    <option value="1">1</option>
+                    <option value="2" selected>2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+            
+            <h2>Bath</h2>
+            <div>
+                <select class="dropdown" id="Bathrooms">
+                    <option value="" disabled selected>Choose Bath</option>
+                    <option value="1">1</option>
+                    <option value="2" selected>2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+            
+            <h2>Location</h2>
+            <div>
+                <select class="location" id="Location">
+                    <option value="" disabled selected>Choose a Location</option>
+                </select>
+            </div>
+            
+            <button class="submit" type="button" onclick="onClickedEstimatePrice()">Estimate Price</button>
+            <div id="uiEstimatedPrice" class="result">
+                <h2></h2>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
