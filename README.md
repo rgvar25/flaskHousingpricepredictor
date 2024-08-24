@@ -11,7 +11,7 @@ To run this project on your local machine, follow these steps:
 You can clone the repository by running:
 
 ```bash
-git clone https://github.com/rgvar25/flaskHousingpricepredictor.git --branch run-locally --single-branch
+git clone https://github.com/rgvar25/flaskHousingpricepredictor.git --branch main --single-branch
 ```
 
 
